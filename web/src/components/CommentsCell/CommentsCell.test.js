@@ -40,3 +40,8 @@ test('Success renders successfully', async () => {
     expect(screen.getByText(comment.body)).toBeInTheDocument()
   })
 })
+
+test('Empty renders a "no comments" message', () => {
+  render(<Empty />)
+  expect(screen.getByText('No comments yet')).toBeInTheDocument()
+})
